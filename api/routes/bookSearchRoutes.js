@@ -9,7 +9,7 @@ module.exports = app => {
     app.get("/books", books.findAll);
 
     // Retrieve single book with book id
-    app.get("/books/:booksId", books.findOne);
+    app.get("/books/:bookId", books.findOne);
 
     // Update a book with book id
     app.put("/books/:bookId", books.update);

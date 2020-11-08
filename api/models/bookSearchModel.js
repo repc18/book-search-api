@@ -28,7 +28,7 @@ Book.create = (newBook, result) => {
 
 // Find book by their id
 Book.findById = (bookId, result) => {
-    sql.query("SELECT * FROM books WHERE id = " + bookId, (err, res) => {
+    sql.query(`SELECT * FROM books WHERE id = ${bookId}`, (err, res) => {
         if (err) {
             console.log("error: " + err);
             result(err, null);
